@@ -2,92 +2,132 @@
     "type": "AirportsCollection",
     "airports": [
         {
-            "text": "FRU",
-            "size": 1.0,
-            "country": "Kyrgyzstan",
-            "city": "Bishkek",
-            "lat": "42.85",
-            "lng": "74.583333333"
+            "text": "DEL",
+            "size": 1.5,
+            "country": "India",
+            "city": "New Delhi",
+            "lat": "28.5665",
+            "lng": "77.1031"
         },
         {
-            "text": "TAS",
+            "text": "LON",
             "size": 1.0,
-            "country": "Uzbekistan",
-            "city": "Tashkent",
-            "lat": "41.266666666667",
-            "lng": "69.366666666667"
+            "country": "United Kingdom",
+            "city": "London",
+            "lat": "51.4700",
+            "lng": "-0.4543"
         },
         {
-            "text": "ALA",
+            "text": "NYC",
             "size": 1.0,
-            "country": "Kazakhstan",
-            "city": "Almaty",
-            "lat": "43.35",
-            "lng": "75.033333333333"
+            "country": "United States",
+            "city": "New York",
+            "lat": "40.6413",
+            "lng": "-73.7781"
         },
         {
-            "text": "ICN",
+            "text": "DXB",
             "size": 1.0,
-            "country": "South Korea",
-            "city": "Incheon",
-            "lat": "37.472222222222",
-            "lng": "126.60833333333"
-        },
-        {
-            "text": "KJA",
-            "size": 1.0,
-            "country": "Russia",
-            "city": "Krasnoyarsk",
-            "lat": "56.05",
-            "lng": "92.9"
-        },
-        {
-            "text": "OVB",
-            "size": 1.0,
-            "country": "Russia",
-            "city": "Novosibirsk",
-            "lat": "55.033333333333",
-            "lng": "83"
-        },
-        {
-            "text": "KUL",
-            "size": 1.0,
-            "country": "Malaysia",
-            "city": "Kuala-Lumpur",
-            "lat": "3.11666666666",
-            "lng": "101.7"
+            "country": "UAE",
+            "city": "Dubai",
+            "lat": "25.2532",
+            "lng": "55.3657"
         },
         {
             "text": "SIN",
             "size": 1.0,
             "country": "Singapore",
             "city": "Singapore",
-            "lat": "1.2916666666667",
-            "lng": "103.85"
+            "lat": "1.3644",
+            "lng": "103.9915"
         },
         {
-            "text": "DPS",
+            "text": "SYD",
             "size": 1.0,
-            "country": "Indonesia",
-            "city": "Denpasar",
-            "lat": "-8.75",
-            "lng": "115.16666666667"
+            "country": "Australia",
+            "city": "Sydney",
+            "lat": "-33.9399",
+            "lng": "151.1753"
         },
         {
-            "text": "DMK",
+            "text": "FRA",
             "size": 1.0,
-            "country": "Thailand",
-            "city": "Bangkok",
-            "lat": "13.9255",
-            "lng": "100.5923"
+            "country": "Germany",
+            "city": "Frankfurt",
+            "lat": "50.0379",
+            "lng": "8.5622"
+        },
+        {
+            "text": "NRT",
+            "size": 1.0,
+            "country": "Japan",
+            "city": "Tokyo",
+            "lat": "35.7647",
+            "lng": "140.3864"
+        },
+        {
+            "text": "LAX",
+            "size": 1.0,
+            "country": "United States",
+            "city": "Los Angeles",
+            "lat": "33.9425",
+            "lng": "-118.4081"
+        },
+        {
+            "text": "CDG",
+            "size": 1.0,
+            "country": "France",
+            "city": "Paris",
+            "lat": "49.0097",
+            "lng": "2.5479"
+        },
+        {
+            "text": "ICN",
+            "size": 1.0,
+            "country": "South Korea",
+            "city": "Seoul",
+            "lat": "37.4602",
+            "lng": "126.4407"
         },
         {
             "text": "BKK",
             "size": 1.0,
             "country": "Thailand",
-            "city": "",
+            "city": "Bangkok",
             "lat": "13.6900",
             "lng": "100.7501"
+        },
+        {
+            "text": "YYZ",
+            "size": 1.0,
+            "country": "Canada",
+            "city": "Toronto",
+            "lat": "43.6777",
+            "lng": "-79.6248"
+        },
+        {
+            "text": "JNB",
+            "size": 1.0,
+            "country": "South Africa",
+            "city": "Johannesburg",
+            "lat": "-26.1367",
+            "lng": "28.2411"
+        },
+        {
+            "text": "SVO",
+            "size": 1.0,
+            "country": "Russia",
+            "city": "Moscow",
+            "lat": "55.9726",
+            "lng": "37.4146"
+        },
+        {
+            "text": "GRU",
+            "size": 1.0,
+            "country": "Brazil",
+            "city": "São Paulo",
+            "lat": "-23.4356",
+            "lng": "-46.4731"
         }
     ]
 }

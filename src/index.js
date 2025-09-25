@@ -24,6 +24,12 @@ let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
 var Globe;
 
+// Globe rotation variables
+let rotationTime = 0;
+const rotationSpeed = 0.2; // Very slow rotation
+const rotationRange = 0.3; // How far it rotates (in radians)
+const indiaBaseRotation = -Math.PI * (5 / 9); // Base rotation to show India
+
 init();
 initGlobe();
 onWindowResize();
@@ -96,8 +102,7 @@ function init() {
   controls.enablePan = false;
   controls.enableRotate = false;
   controls.enableZoom = false;
-  controls.autoRotate = true;
-  controls.autoRotateSpeed = 0.5;
+  controls.autoRotate = false;
 
   window.addEventListener("resize", onWindowResize, false);
   document.addEventListener("mousemove", onMouseMove);
@@ -143,16 +148,6 @@ function initGlobe() {
       .arcDashAnimateTime(1000)
       .arcsTransitionDuration(1000)
       .arcDashInitialGap((e) => e.order * 1)
-      .labelsData(airportHistory.airports)
-      .labelColor(() => "#ffcb21")
-      .labelDotOrientation((e) => {
-        return e.text === "ALA" ? "top" : "right";
-      })
-      .labelDotRadius(0.3)
-      .labelSize((e) => e.size)
-      .labelText("city")
-      .labelResolution(6)
-      .labelAltitude(0.01)
       .pointsData(airportHistory.airports)
       .pointColor(() => "#ffffff")
       .pointsMerge(true)
@@ -160,7 +155,8 @@ function initGlobe() {
       .pointRadius(0.05);
   }, 1000);
 
-  Globe.rotateY(-Math.PI * (5 / 9));
+  // Set initial rotation to show India (Z rotation for tilt)
+  Globe.rotation.y = indiaBaseRotation;
   Globe.rotateZ(-Math.PI / 6);
   const globeMaterial = Globe.globeMaterial();
   globeMaterial.color = new Color(0x3a228a);
@@ -193,6 +189,14 @@ function onWindowResize() {
 function animate() {
   // Remove mouse-based camera movement for non-responsive globe
   // Keep camera in fixed position
+
+  // Custom oscillating rotation around India
+  if (Globe) {
+    rotationTime += rotationSpeed * 0.01; // Very slow increment
+    const oscillation = Math.sin(rotationTime) * rotationRange;
+    Globe.rotation.y = indiaBaseRotation + oscillation;
+  }
+
   camera.lookAt(scene.position);
   controls.update();
   renderer.render(scene, camera);

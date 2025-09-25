@@ -1,0 +1,25 @@
+self["webpackHotUpdatepandemic_globe"]("main",{
+
+/***/ "./src/files/my-flights.json":
+/*!***********************************!*\
+  !*** ./src/files/my-flights.json ***!
+  \***********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse("{\"type\":\"FlightsCollection\",\"flights\":[{\"type\":\"flight\",\"order\":1,\"from\":\"DEL\",\"to\":\"LON\",\"flightCode\":\"AI 131\",\"date\":\"2024\",\"status\":true,\"startLat\":28.5665,\"startLng\":77.1031,\"endLat\":51.47,\"endLng\":-0.4543,\"arcAlt\":0.3},{\"type\":\"flight\",\"order\":2,\"from\":\"DEL\",\"to\":\"NYC\",\"flightCode\":\"AI 101\",\"date\":\"2024\",\"status\":true,\"startLat\":28.5665,\"startLng\":77.1031,\"endLat\":40.6413,\"endLng\":-73.7781,\"arcAlt\":0.4},{\"type\":\"flight\",\"order\":3,\"from\":\"DEL\",\"to\":\"DXB\",\"flightCode\":\"AI 995\",\"date\":\"2024\",\"status\":true,\"startLat\":28.5665,\"startLng\":77.1031,\"endLat\":25.2532,\"endLng\":55.3657,\"arcAlt\":0.15},{\"type\":\"flight\",\"order\":4,\"from\":\"DEL\",\"to\":\"SIN\",\"flightCode\":\"AI 345\",\"date\":\"2024\",\"status\":true,\"startLat\":28.5665,\"startLng\":77.1031,\"endLat\":1.3644,\"endLng\":103.9915,\"arcAlt\":0.25},{\"type\":\"flight\",\"order\":5,\"from\":\"DEL\",\"to\":\"SYD\",\"flightCode\":\"AI 301\",\"date\":\"2024\",\"status\":true,\"startLat\":28.5665,\"startLng\":77.1031,\"endLat\":-33.9399,\"endLng\":151.1753,\"arcAlt\":0.35},{\"type\":\"flight\",\"order\":6,\"from\":\"DEL\",\"to\":\"FRA\",\"flightCode\":\"LH 761\",\"date\":\"2024\",\"status\":true,\"startLat\":28.5665,\"startLng\":77.1031,\"endLat\":50.0379,\"endLng\":8.5622,\"arcAlt\":0.28},{\"type\":\"flight\",\"order\":7,\"from\":\"DEL\",\"to\":\"NRT\",\"flightCode\":\"AI 307\",\"date\":\"2024\",\"status\":true,\"startLat\":28.5665,\"startLng\":77.1031,\"endLat\":35.7647,\"endLng\":140.3864,\"arcAlt\":0.22},{\"type\":\"flight\",\"order\":8,\"from\":\"DEL\",\"to\":\"LAX\",\"flightCode\":\"AI 173\",\"date\":\"2024\",\"status\":true,\"startLat\":28.5665,\"startLng\":77.1031,\"endLat\":33.9425,\"endLng\":-118.4081,\"arcAlt\":0.45},{\"type\":\"flight\",\"order\":9,\"from\":\"DEL\",\"to\":\"CDG\",\"flightCode\":\"AF 226\",\"date\":\"2024\",\"status\":true,\"startLat\":28.5665,\"startLng\":77.1031,\"endLat\":49.0097,\"endLng\":2.5479,\"arcAlt\":0.3},{\"type\":\"flight\",\"order\":10,\"from\":\"DEL\",\"to\":\"ICN\",\"flightCode\":\"KE 481\",\"date\":\"2024\",\"status\":true,\"startLat\":28.5665,\"startLng\":77.1031,\"endLat\":37.4602,\"endLng\":126.4407,\"arcAlt\":0.2},{\"type\":\"flight\",\"order\":11,\"from\":\"DEL\",\"to\":\"BKK\",\"flightCode\":\"TG 314\",\"date\":\"2024\",\"status\":true,\"startLat\":28.5665,\"startLng\":77.1031,\"endLat\":13.69,\"endLng\":100.7501,\"arcAlt\":0.18},{\"type\":\"flight\",\"order\":12,\"from\":\"DEL\",\"to\":\"YYZ\",\"flightCode\":\"AC 042\",\"date\":\"2024\",\"status\":true,\"startLat\":28.5665,\"startLng\":77.1031,\"endLat\":43.6777,\"endLng\":-79.6248,\"arcAlt\":0.4},{\"type\":\"flight\",\"order\":13,\"from\":\"DEL\",\"to\":\"JNB\",\"flightCode\":\"AI 125\",\"date\":\"2024\",\"status\":true,\"startLat\":28.5665,\"startLng\":77.1031,\"endLat\":-26.1367,\"endLng\":28.2411,\"arcAlt\":0.32},{\"type\":\"flight\",\"order\":14,\"from\":\"DEL\",\"to\":\"SVO\",\"flightCode\":\"SU 232\",\"date\":\"2024\",\"status\":true,\"startLat\":28.5665,\"startLng\":77.1031,\"endLat\":55.9726,\"endLng\":37.4146,\"arcAlt\":0.25},{\"type\":\"flight\",\"order\":15,\"from\":\"DEL\",\"to\":\"GRU\",\"flightCode\":\"AI 191\",\"date\":\"2024\",\"status\":true,\"startLat\":28.5665,\"startLng\":77.1031,\"endLat\":-23.4356,\"endLng\":-46.4731,\"arcAlt\":0.5}]}");
+
+/***/ })
+
+},
+/******/ function(__webpack_require__) { // webpackRuntimeModules
+/******/ 	"use strict";
+/******/ 
+/******/ 	/* webpack/runtime/getFullHash */
+/******/ 	(() => {
+/******/ 		__webpack_require__.h = () => "42dc59bf8c0dfc84031e"
+/******/ 	})();
+/******/ 	
+/******/ }
+);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wYW5kZW1pYy1nbG9iZS93ZWJwYWNrL3J1bnRpbWUvZ2V0RnVsbEhhc2giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7OztXQUFBLG9EIiwiZmlsZSI6Im1haW4uYTk3NThhYzRkZjNhZTdiMjVjZDcuaG90LXVwZGF0ZS5qcyIsInNvdXJjZXNDb250ZW50IjpbIl9fd2VicGFja19yZXF1aXJlX18uaCA9ICgpID0+IFwiNDJkYzU5YmY4YzBkZmM4NDAzMWVcIiJdLCJzb3VyY2VSb290IjoiIn0=
