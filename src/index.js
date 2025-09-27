@@ -34,30 +34,41 @@ const indiaBaseRotation = -Math.PI * (5 / 9); // Base rotation to show India
 let pulsateTime = 0;
 const pulsateSpeed = 0.02;
 
-// Network connections data - create connected lines between major countries
+// Enhanced network connections data with supplier hub information
 const networkConnections = [
-  // India as central hub
-  { startLat: 28.6139, startLng: 77.2090, endLat: 40.7128, endLng: -74.0060, order: 0 }, // India to USA
-  { startLat: 28.6139, startLng: 77.2090, endLat: 51.5074, endLng: -0.1278, order: 1 }, // India to UK
-  { startLat: 28.6139, startLng: 77.2090, endLat: 35.6762, endLng: 139.6503, order: 2 }, // India to Japan
-  { startLat: 28.6139, startLng: 77.2090, endLat: -33.8688, endLng: 151.2093, order: 3 }, // India to Australia
-  { startLat: 28.6139, startLng: 77.2090, endLat: 55.7558, endLng: 37.6176, order: 4 }, // India to Russia
-  { startLat: 28.6139, startLng: 77.2090, endLat: 39.9042, endLng: 116.4074, order: 5 }, // India to China
-  { startLat: 28.6139, startLng: 77.2090, endLat: 52.5200, endLng: 13.4050, order: 6 }, // India to Germany
-  { startLat: 28.6139, startLng: 77.2090, endLat: 1.3521, endLng: 103.8198, order: 7 }, // India to Singapore
-  { startLat: 28.6139, startLng: 77.2090, endLat: 25.2048, endLng: 55.2708, order: 8 }, // India to UAE
+  // India as central hub - connecting to major buyer countries
+  { startLat: 28.6139, startLng: 77.2090, endLat: 40.7128, endLng: -74.0060, order: 0, name: "India-USA", volume: "$450M" }, // India to USA
+  { startLat: 28.6139, startLng: 77.2090, endLat: 51.5074, endLng: -0.1278, order: 1, name: "India-UK", volume: "$320M" }, // India to UK
+  { startLat: 28.6139, startLng: 77.2090, endLat: 35.6762, endLng: 139.6503, order: 2, name: "India-Japan", volume: "$280M" }, // India to Japan
+  { startLat: 28.6139, startLng: 77.2090, endLat: -33.8688, endLng: 151.2093, order: 3, name: "India-Australia", volume: "$180M" }, // India to Australia
+  { startLat: 28.6139, startLng: 77.2090, endLat: 52.5200, endLng: 13.4050, order: 4, name: "India-Germany", volume: "$390M" }, // India to Germany
+  { startLat: 28.6139, startLng: 77.2090, endLat: 1.3521, endLng: 103.8198, order: 5, name: "India-Singapore", volume: "$150M" }, // India to Singapore
+  { startLat: 28.6139, startLng: 77.2090, endLat: 25.2048, endLng: 55.2708, order: 6, name: "India-UAE", volume: "$220M" }, // India to UAE
+  { startLat: 28.6139, startLng: 77.2090, endLat: 43.6532, endLng: -79.3832, order: 7, name: "India-Canada", volume: "$160M" }, // India to Canada
+  { startLat: 28.6139, startLng: 77.2090, endLat: 55.7558, endLng: 37.6176, order: 8, name: "India-Russia", volume: "$120M" }, // India to Russia
 
-  // Cross connections between other major hubs
-  { startLat: 40.7128, startLng: -74.0060, endLat: 51.5074, endLng: -0.1278, order: 9 }, // USA to UK
-  { startLat: 40.7128, startLng: -74.0060, endLat: 35.6762, endLng: 139.6503, order: 10 }, // USA to Japan
-  { startLat: 51.5074, startLng: -0.1278, endLat: 52.5200, endLng: 13.4050, order: 11 }, // UK to Germany
-  { startLat: 35.6762, startLng: 139.6503, endLat: 1.3521, endLng: 103.8198, order: 12 }, // Japan to Singapore
-  { startLat: 39.9042, startLng: 116.4074, endLat: 35.6762, endLng: 139.6503, order: 13 }, // China to Japan
+  // Secondary connections between buyer countries
+  { startLat: 40.7128, startLng: -74.0060, endLat: 51.5074, endLng: -0.1278, order: 9, name: "USA-UK", volume: "$80M" }, // USA to UK
+  { startLat: 51.5074, startLng: -0.1278, endLat: 52.5200, endLng: 13.4050, order: 10, name: "UK-Germany", volume: "$60M" }, // UK to Germany
+  { startLat: 35.6762, startLng: 139.6503, endLat: 1.3521, endLng: 103.8198, order: 11, name: "Japan-Singapore", volume: "$40M" }, // Japan to Singapore
 ].map(conn => ({
   ...conn,
-  arcAlt: 0.1 + Math.random() * 0.2, // Random altitude between 0.1-0.3
-  status: Math.random() > 0.2 // 80% active connections
+  arcAlt: 0.15 + Math.random() * 0.25, // Random altitude between 0.15-0.4
+  status: Math.random() > 0.15, // 85% active connections
+  isIndiaConnection: conn.startLat === 28.6139 || conn.endLat === 28.6139
 }));
+
+// Indian manufacturing hubs for enhanced visualization
+const indianHubs = [
+  { lat: 19.0760, lng: 72.8777, name: "Mumbai", industry: "Textiles & Chemicals", suppliers: 2500 },
+  { lat: 28.7041, lng: 77.1025, name: "Delhi", industry: "Electronics & Auto", suppliers: 1800 },
+  { lat: 13.0827, lng: 80.2707, name: "Chennai", industry: "Automotive & IT", suppliers: 1200 },
+  { lat: 12.9716, lng: 77.5946, name: "Bangalore", industry: "Electronics & Pharma", suppliers: 1500 },
+  { lat: 18.5204, lng: 73.8567, name: "Pune", industry: "Automotive & Engineering", suppliers: 900 },
+  { lat: 22.5726, lng: 88.3639, name: "Kolkata", industry: "Jute & Leather", suppliers: 700 },
+  { lat: 23.0225, lng: 72.5714, name: "Ahmedabad", industry: "Textiles & Chemicals", suppliers: 1100 },
+  { lat: 17.3850, lng: 78.4867, name: "Hyderabad", industry: "Pharmaceuticals & IT", suppliers: 800 }
+];
 
 init();
 initGlobe();
@@ -233,11 +244,14 @@ function animate() {
       return e.status ? 0.8 * individualPulse : 0.4 * individualPulse;
     });
 
-    // Update dash animation for traveling pulses
+    // Update dash animation for traveling pulses with enhanced effects
     Globe.arcDashInitialGap((e) => {
-      const travelingPulse = (pulsateTime * 0.1 + e.order * 0.2) % 1;
+      const speed = e.isIndiaConnection ? 0.15 : 0.08; // Faster for India connections
+      const travelingPulse = (pulsateTime * speed + e.order * 0.2) % 1;
       return travelingPulse;
     });
+
+    // Simplified - remove complex arc labels for now
   }
 
   camera.lookAt(scene.position);
